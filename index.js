@@ -1,6 +1,6 @@
 const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,?!'_-&@#$%*()/:<>|+= ";
 
-// Encryption function
+
 function encryptText(text, key) {
     let encryptedText = "";
 
@@ -22,7 +22,7 @@ function encryptText(text, key) {
     return encryptedText;
 }
 
-// Decrypt function
+
 function decryptText(encryptedText, key) {
     let decryptedText = "";
 
@@ -45,7 +45,7 @@ function decryptText(encryptedText, key) {
     return decryptedText;
 }
 
-// Update result based on selected operation (enc or dec)
+
 function updateResult(isEncrypting) {
     const text = document.getElementById("message").value;
     const key = document.getElementById("key").value;
@@ -61,7 +61,7 @@ function updateResult(isEncrypting) {
     document.getElementById("result").textContent = result;
 }
 
-// Add event listeners to buttons
+
 document.getElementById("enc-btn").addEventListener('click', function () {
     updateResult(true);
 });
@@ -70,7 +70,7 @@ document.getElementById("dec-btn").addEventListener('click', function () {
     updateResult(false);
 });
 
-// Initialize the result with encrypted text when page loads
+
 document.addEventListener('DOMContentLoaded', () => {
     updateResult(true);
 });
